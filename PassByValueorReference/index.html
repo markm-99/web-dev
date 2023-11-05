@@ -1,0 +1,18 @@
+<h2>Pass by value: </h2>
+
+<script>
+    const person = (
+            name: 'Dom',
+            age: 30,
+            occupation: 'web developer'
+    );
+
+    function decode(a)
+    {
+        a.name = 'Michael';
+        console.log(a);
+    }
+    decode(person)
+    console.log(person)
+</script>
+</body>
