@@ -1,0 +1,33 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 250px;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 20px;
+    justify-content: space-around;
+    align-content: stretch;
+    height: 100vh;
+    justify-items: center;
+    align-items: stretch;
+}
+    /* diff strings of areas for code to take up
+    grid-template-areas: "header header"
+                         "sidebar content"
+                         "footer footer";
+    /* grid-column-gap: 10px; */
+    /* grid-template-columns: 200px 200px; */
+    /* make grid items twice as long use 2fr */
+    /* grid-template-rows: 200px; */
+/* }
+
+.grid-item-1
+{
+    grid-column: span 5;
+}
+.grid-item-2
+{
+    grid-row: span 2;
+}
+.grid-item-3
+{
+    grid-row: span 1;
+}  */
