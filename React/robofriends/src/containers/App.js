@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import ErrorBoundary from '../components/ErrorBoundary';
 import { robots } from '../robots';
 import './App.css';
 
@@ -56,13 +57,17 @@ class App extends Component {
         else
         {
 
-    return (
+    return !robots.length ?
+        <h1>Loading...</h1> :
+        (
         <div className='tc'>
-        <h1 className='f2'> Mark's Robot Contacts </h1> 
+        <h1 className='f1'> Mark's Robot Contacts </h1> 
         {/* let's app know there's a change */}
         <SearchBox searchChange={this.onSearchChange}/>
         <Scroll>
+        <ErrorBoundary>
         <CardList robots = {filteredRobots} /> 
+        </ErrorBoundary>
         </Scroll>
         </div>
     );
